@@ -79,3 +79,10 @@
     border-right-style: solid;
     border-right-color: #8f8f8f;
 }
+
+.my-bg-transparent {
+    background-color: rgba(211, 207, 207, 0.8588235294117647);
+    border-radius: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
