@@ -5,4 +5,4 @@ This is a repository with all the projects I made with freecodecamp. [My freeCod
 ## Responsive Web Design Projects
 
 ### [Pink Floyd Tribute Page](https://timdev0.github.io/freecodecamp-projects/responsive-web-design/pinkfloyd-tribute/)
-Portfolio for the E6 test.
+Build a Tribute Page. Instructions [here]. (https://www.freecodecamp.org/learn/responsive-web-design/ responsive-web-design-projects/build-a-tribute-page)
