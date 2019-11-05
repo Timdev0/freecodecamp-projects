@@ -1,3 +1,7 @@
+#nav-bar{
+    background-color: #a696c3 !important;
+}
+
 #main-content{
     margin-top: 5rem;
 }
@@ -19,6 +23,15 @@ input#email{
 
 .grid{
     display: flex;
+}
+
+.icon{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.img-icon{
+    max-height: 100%;
 }
 
 .grid .icon{
