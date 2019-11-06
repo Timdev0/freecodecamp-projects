@@ -14,14 +14,106 @@
         <div class="container-fluid">
             <div class="row">
                 <nav id="navbar" class="col-md-3">
-                    <header class="header-nav">Vue.js Documentation</header>
-                    <a href="" class="nav-link"></a>
+                    <header class="header-nav"><img class="img-fluid vuejs" src="assets/vuejs.png" alt="">Vue.js Documentation</header>
+                    <a href="#NPM_Installation" class="nav-link">NPM Installation</a>
+                    <a href="#Terms" class="nav-link">Terms</a>
+                    <a href="#What_is_Vue_js" class="nav-link">What is Vue.js?</a>
+                    <a href="#Getting_Started" class="nav-link">Getting Started</a>
+                    <a href="#Declarative_Rendering" class="nav-link">Declarative Rendering</a>
                 </nav>
 
-                <main id="main-doc" class="col-md-9">
-                    <section id="Section_1" class="main-section">
-                        <header class="header-section">Section 1</header>
+                <main id="main-doc" class="offset-md-3 col-md-9">
+                    <section id="NPM_Installation" class="main-section">
+                        <header class="header-section">NPM Installation</header>
+                        <p>NPM is the recommended installation method when building large scale applications with Vue. It pairs nicely with module bundlers such as <a href="https://webpack.js.org/" target="_blank">Webpack</a> or <a href="http://browserify.org/" target="_blank">Browserify</a>. Vue also provides accompanying tools for authoring <a href="single-file-components.html">Single File Components</a>.</p>
+                            <code class="bash">
+                                <span># latest stable</span><br>
+                                <span>$ npm install vue</span>
+                            </code>
                     </section>
+
+                    <section id="Terms" class="main-section">
+                        <header class="header-section">Terms</header>
+                        <ul>
+                            <li>
+                                <p><strong>Full</strong>: builds that contain both the compiler and the runtime.</p>
+                            </li>
+                            <li>
+                                <p><strong>Compiler</strong>: code that is responsible for compiling template strings into JavaScript render functions.</p>
+                            </li>
+                            <li>
+                                <p><strong>Runtime</strong>: code that is responsible for creating Vue instances, rendering and patching virtual DOM, etc. Basically everything minus the compiler.</p>
+                            </li>
+                            <li>
+                                <p><strong><a href="https://github.com/umdjs/umd" target="_blank">UMD</a></strong>: UMD builds can be used directly in the browser via a <code>&lt;script&gt;</code> tag. The default file from jsDelivr CDN at <a href="https://cdn.jsdelivr.net/npm/vue" target="_blank">https://cdn.jsdelivr.net/npm/vue</a> is the Runtime + Compiler UMD build (<code>vue.js</code>).</p>
+                            </li>
+                            <li>
+                                <p><strong><a href="http://wiki.commonjs.org/wiki/Modules/1.1" target="_blank">CommonJS</a></strong>: CommonJS builds are intended for use with older bundlers like <a href="http://browserify.org/" target="_blank">browserify</a> or <a href="https://webpack.github.io" target="_blank">webpack 1</a>. The default file for these bundlers (<code>pkg.main</code>) is the Runtime only CommonJS build (<code>vue.runtime.common.js</code>).</p>
+                            </li>
+                            <li>
+                                <p><strong><a href="http://exploringjs.com/es6/ch_modules.html" target="_blank">ES Module</a></strong>: starting in 2.6 Vue provides two ES Modules (ESM) builds:</p>
+                                <ul>
+                                    <li>
+                                        <p>ESM for bundlers: intended for use with modern bundlers like <a href="https://webpack.js.org" target="_blank">webpack 2</a> or <a href="https://rollupjs.org/" target="_blank">Rollup</a>. ESM format is designed to be statically analyzable so the bundlers can take advantage of that to perform “tree-shaking” and eliminate unused code from your final bundle. The default file for these bundlers (<code>pkg.module</code>) is the Runtime only ES Module build (<code>vue.runtime.esm.js</code>).</p>
+                                    </li>
+                                    <li>
+                                        <p>ESM for browsers (2.6+ only): intended for direct imports in modern browsers via <code>&lt;script type="module"&gt;</code>.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="What_is_Vue_js" class="main-section">
+                        <header class="header-section">What is Vue.js?</header>
+                        <p>Vue (<i>pronounced /vjuː/, like view</i>) is a <b>progressive framework</b> for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects. On the other hand, Vue is also perfectly capable of powering sophisticated Single-Page Applications when used in combination with <a href="https://vuejs.org/v2/guide/single-file-components.html" target="_blank">modern tooling</a> and <a href="https://github.com/vuejs/awesome-vue#components--libraries" target="_blank">supporting libraries</a>.</p>
+                        <p>If you’d like to learn more about Vue before diving in, we created a video walking through the core principles and a sample project.</p>
+                        <p>If you are an experienced frontend developer and want to know how Vue compares to other libraries/frameworks, check out the <a href="https://vuejs.org/v2/guide/comparison.html" target="_blank">Comparison with Other Frameworks</a>.</p>
+                    </section>
+
+                    <section id="Getting_Started" class="main-section">
+                        <header class="header-section">Getting Started</header>
+                        <p>The easiest way to try out Vue.js is using the <a href="https://jsfiddle.net/chrisvfritz/50wL7mdz/" target="_blank" rel="noopener">JSFiddle Hello World example</a>. Feel free to open it in another tab and follow along as we go through some basic examples. Or, you can <a href="https://gist.githubusercontent.com/chrisvfritz/7f8d7d63000b48493c336e48b3db3e52/raw/ed60c4e5d5c6fec48b0921edaed0cb60be30e87c/index.html" target="_blank" download="index.html" rel="noopener noreferrer">create an <code>index.html</code> file</a> and include Vue with:</p>
+                        <code class="code html">
+                            <span>&lt;!-- development version, includes helpful console warnings --&gt;</span>
+                            <br>
+                            <span>&lt;script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"&gt;&lt;/script&gt;</span>
+                        </code>
+                        <p>or:</p>
+                        <code class="code html">
+                            <span>&lt;!-- production version, optimized for size and speed --&gt;</span>
+                            <br>
+                            <span>&lt;script src="https://cdn.jsdelivr.net/npm/vue"&gt;&lt;/script&gt;</span>
+                        </code>
+                        <p>The <a href="installation.html">Installation</a> page provides more options of installing Vue. Note: We <strong>do not</strong> recommend that beginners start with <code>vue-cli</code>, especially if you are not yet familiar with Node.js-based build tools.</p>
+                        <p>If you prefer something more interactive, you can also check out <a href="https://scrimba.com/g/gvuedocs" target="_blank" rel="noopener">this tutorial series on Scrimba</a>, which gives you a mix of screencast and code playground that you can pause and play around with anytime.</p>
+                  </section>
+
+                  <section id="Declarative_Rendering" class="main-section">
+                        <header class="header-section">Declarative Rendering</header>
+                        <p>It’s easy to toggle the presence of an element, too:</p>
+                        <code class="code html">
+                            <span>&lt;div id="app"&gt;</span>
+                            <br>
+                            <span class="left-indent-1">{{ message }}</span>
+                            <br>
+                            <span>&lt;/div&gt;</span>
+                        </code>
+                        <code class="code js">
+                            <span>var app = new Vue({</span>
+                            <br>
+                            <span class="left-indent-1">el: '#app',</span>
+                            <br>
+                            <span class="left-indent-2">data: {</span>
+                            <br>
+                            <span class="left-indent-3">message: 'Hello Vue!'</span>
+                            <br>
+                            <span class="left-indent-2">}</span>
+                            <br>
+                            <span class="left-indent-1">})</span>
+                        </code>
+                    </section>
+
                 </main>
             </div>
         </div>
