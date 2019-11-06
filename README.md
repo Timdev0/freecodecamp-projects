@@ -11,4 +11,7 @@ Build a Tribute Page. Instructions [here](https://www.freecodecamp.org/learn/res
 Build a Survey Form. Instructions [here](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-survey-form).
 
 ### [Product Landing](https://timdev0.github.io/freecodecamp-projects/responsive-web-design/product-landing/)
-Build a Product Landing Page Instructions [here](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-product-landing-page).
+Build a Product Landing Page. Instructions [here](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-product-landing-page).
+
+### [Product Landing](https://timdev0.github.io/freecodecamp-projects/responsive-web-design/technical-doc/)
+Build a Technical Documentation Page. Instructions [here](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page).
