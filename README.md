@@ -13,5 +13,5 @@ Build a Survey Form. Instructions [here](https://www.freecodecamp.org/learn/resp
 ### [Product Landing](https://timdev0.github.io/freecodecamp-projects/responsive-web-design/product-landing/)
 Build a Product Landing Page. Instructions [here](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-product-landing-page).
 
-### [Product Landing](https://timdev0.github.io/freecodecamp-projects/responsive-web-design/technical-doc/)
+### [Technical Documentation](https://timdev0.github.io/freecodecamp-projects/responsive-web-design/technical-doc/)
 Build a Technical Documentation Page. Instructions [here](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page).
