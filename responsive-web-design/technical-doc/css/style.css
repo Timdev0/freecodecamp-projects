@@ -146,3 +146,16 @@ code{
         padding-top: 6px;
     }
 }
+
+#footer{
+    background-color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+}
+
+#footer p{
+    margin: 0;
+    color: #ea5196;
+    text-align: center;
+}
