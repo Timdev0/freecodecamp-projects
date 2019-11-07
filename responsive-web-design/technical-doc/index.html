@@ -8,6 +8,7 @@
         <link rel="icon" type="image/png" href="assets/favicon.png" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
     </head>
 
     <body>
@@ -75,14 +76,12 @@
                         <header class="header-section">Getting Started</header>
                         <p>The easiest way to try out Vue.js is using the <a href="https://jsfiddle.net/chrisvfritz/50wL7mdz/" target="_blank" rel="noopener">JSFiddle Hello World example</a>. Feel free to open it in another tab and follow along as we go through some basic examples. Or, you can <a href="https://gist.githubusercontent.com/chrisvfritz/7f8d7d63000b48493c336e48b3db3e52/raw/ed60c4e5d5c6fec48b0921edaed0cb60be30e87c/index.html" target="_blank" download="index.html" rel="noopener noreferrer">create an <code>index.html</code> file</a> and include Vue with:</p>
                         <code class="code html">
-                            <span>&lt;!-- development version, includes helpful console warnings --&gt;</span>
-                            <br>
+                            <span>&lt;!-- development version, includes helpful console warnings --&gt;</span><br>
                             <span>&lt;script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"&gt;&lt;/script&gt;</span>
                         </code>
                         <p>or:</p>
                         <code class="code html">
-                            <span>&lt;!-- production version, optimized for size and speed --&gt;</span>
-                            <br>
+                            <span>&lt;!-- production version, optimized for size and speed --&gt;</span><br>
                             <span>&lt;script src="https://cdn.jsdelivr.net/npm/vue"&gt;&lt;/script&gt;</span>
                         </code>
                         <p>The <a href="installation.html">Installation</a> page provides more options of installing Vue. Note: We <strong>do not</strong> recommend that beginners start with <code>vue-cli</code>, especially if you are not yet familiar with Node.js-based build tools.</p>
@@ -93,27 +92,46 @@
                         <header class="header-section">Declarative Rendering</header>
                         <p>It’s easy to toggle the presence of an element, too:</p>
                         <code class="code html">
-                            <span>&lt;div id="app"&gt;</span>
-                            <br>
-                            <span class="left-indent-1">{{ message }}</span>
-                            <br>
+                            <span>&lt;div id="app"&gt;</span><br>
+                            <span class="left-indent-1">{{ message }}</span><br>
                             <span>&lt;/div&gt;</span>
                         </code>
                         <code class="code js">
-                            <span>var app = new Vue({</span>
-                            <br>
-                            <span class="left-indent-1">el: '#app',</span>
-                            <br>
-                            <span class="left-indent-2">data: {</span>
-                            <br>
-                            <span class="left-indent-3">message: 'Hello Vue!'</span>
-                            <br>
-                            <span class="left-indent-2">}</span>
-                            <br>
+                            <span>var app = new Vue({</span><br>
+                            <span class="left-indent-1">el: '#app',</span><br>
+                            <span class="left-indent-2">data: {</span><br>
+                            <span class="left-indent-3">message: 'Hello Vue!'</span><br>
+                            <span class="left-indent-2">}</span><br>
                             <span class="left-indent-1">})</span>
                         </code>
+                        <div class="code-result">
+                            Hello Vue!
+                        </div>
+                        <p>We have already created our very first Vue app! This looks pretty similar to rendering a string template, but Vue has done a lot of work under the hood. The data and the DOM are now linked, and everything is now <strong>reactive</strong>. How do we know? Open your browser’s JavaScript console (right now, on this page) and set <code>app.message</code> to a different value. You should see the rendered example above update accordingly.</p>
+                        <p>In addition to text interpolation, we can also bind element attributes like this:</p>
+                        <code class="code html">
+                            <span>&lt;div id="app-2"&gt;</span><br>
+                            <span class="left-indent-1">&lt;span v-bind:title="message"&gt;</span><br>
+                            <span class="left-indent-2">Hover your mouse over me for a few seconds to see my dynamically bound title!</span><br>
+                            <span class="left-indent-1">&lt;span&gt;</span><br>
+                            <span>&lt;/div&gt;</span>
+                        </code>
+                        <code class="code js">
+                            <span>var app2 = new Vue({</span><br>
+                            <span class="left-indent-1">el: '#app-2',</span><br>
+                            <span class="left-indent-1">data: {</span><br>
+                            <span class="left-indent-2">message: 'You loaded this page on ' + new Date().toLocaleString()</span><br>
+                            <span class="left-indent-1">}</span><br>
+                            <span>})</span>
+                        </code>
+                        <p>Here we are encountering something new. The <code>v-bind</code> attribute you are seeing is called a <strong>directive</strong>. Directives are prefixed with <code>v-</code> to indicate that they are special attributes provided by Vue, and as you may have guessed, they apply special reactive behavior to the rendered DOM. Here, it is basically saying “keep this element’s <code>title</code> attribute up-to-date with the <code>message</code> property on the Vue instance.”</p>
+                        <p>If you open up your JavaScript console again and enter <code>app2.message = 'some new message'</code>, you’ll once again see that the bound HTML - in this case the <code>title</code> attribute - has been updated.</p>
                     </section>
-
+                    <div class="go-up">
+                        <a href="#">
+                            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                        </a>
+                    </div>
                 </main>
             </div>
         </div>

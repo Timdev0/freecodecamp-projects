@@ -6,6 +6,14 @@ nav{
     position: fixed !important;
 }
 
+.header-section{
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
 .vuejs{
     max-width: 25px;
 }
@@ -66,4 +74,75 @@ code{
     line-height: 15px;
     height: 15px;
     font-weight: 600;
+}
+
+ .code-result{
+    border: 1px solid #eee;
+    border-radius: 2px;
+    padding: 25px 35px;
+    margin-top: 1em;
+    margin-bottom: 40px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow-x: auto;
+}
+
+.header-nav{
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.header-nav img{
+    margin-right: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    nav#navbar {
+        margin-top: 1rem;
+    }
+    .go-up{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #main-doc {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    nav#navbar {
+        position: relative !important;
+        background-color: #ebebeb;
+        padding-bottom: 1rem;
+        border-radius: 4px;
+        margin-bottom: -2rem;
+    }
+    .header-nav{
+        margin-top: 1rem;
+    }
+    .nav-link{
+        display: inline-block;
+    }
+    .go-up{
+        position: fixed;
+        right: 1.5rem;
+        bottom: 1.5rem;
+        font-size: 22px;
+    }
+    .go-up a{
+        background-color: #ea5196;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 10px;
+        color: #ffffff !important;
+        display: block;
+        padding-left: 8.25px;
+        padding-top: 6px;
+    }
 }
